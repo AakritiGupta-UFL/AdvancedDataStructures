@@ -1,0 +1,45 @@
+import java.util.PriorityQueue;
+
+public class MinHeapAsPQ {
+
+    PriorityQueue<Integer> pq;
+
+    public MinHeapAsPQ()
+    {
+        pq=new PriorityQueue();
+
+    }
+
+    public void insert(int val)
+    {
+        pq.offer(val);
+    }
+
+    public void remove()
+    {
+        pq.poll();
+    }
+
+    public void print()
+    {
+        System.out.println(pq);
+    }
+    public static void main(String[]args)
+    {
+        MinHeapAsPQ heap=new MinHeapAsPQ();
+
+        heap.insert(1);
+        heap.insert(6);
+        heap.insert(2);
+        heap.insert(9);
+        heap.insert(4);
+        heap.insert(3);
+        heap.insert(8);
+
+        heap.print();
+        heap.remove();
+        heap.remove();
+        heap.remove();
+        heap.print();
+    }
+}
